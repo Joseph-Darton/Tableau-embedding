@@ -4,35 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>👽 B2S DS52 👽</title>
-    <link rel="stylesheet" href="stlyes.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-<body>
 
-<h1>Back to School</h1>
-
-<h2>Check this Dashboard</h2>
+  <body>
+    <h1>Back to School</h1>
+    <h2>Check this Dashboard</h2>
 
     <fieldset>
-        <legend>Filter the views!</legend>
-        <input type="button" value="Oregon and Washington only" id="onw">
-        <input type="button" value="Clear filter" id="clear">
-        <input type="button" value="Undo" id="undo">
-    <fieldset>
+      <legend>Filter the Views!</legend>
+
+      <input type="button" value="Oregon and Washington only" id="onw" />
+      <input type="button" value="Clear Filter" id="clear" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
+
+    <div class="dashboard-container">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+        toolbar="bottom"
+        hide-tabs
+      >
+      </tableau-viz>
+    </div>
 
     <script
       type="module"
       src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
     ></script>
 
-    <tableau-viz
-      id="tableauViz"
-      src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
-      toolbar="bottom"
-      hide-tabs
-      height="1000px"
-      width="1000px"
-    >
-    </tableau-viz>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
